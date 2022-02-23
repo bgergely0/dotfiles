@@ -64,7 +64,7 @@ floating_modifier $mod
 for_window [class="GNU Octave" instance="octave-gui"] floating enable
 #for_window [class="MATLAB R2020b - academic use" instance="sun-awt-X11-XFramePeer"] floating enable
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec .cargo/bin/alacritty
 #
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -210,7 +210,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-status_command bumblebee-status -m cpu memory battery date time pasink pasource nic uptime \
+status_command bumblebee-status -m time cpu memory battery date pasink pasource nic uptime \
 -p cpu.format="{:3.1f}%" memory.format="{used} ({percent:2.0f}%)" time.format="%H:%M" nic.states="^down"  nic.format="{state} {ssid}"  -t iceberg-dark-powerline
 #        status_command i3status
         position top
