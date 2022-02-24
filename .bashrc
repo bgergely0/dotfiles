@@ -141,6 +141,7 @@ ex ()
       *.zip)       unzip $1     ;;
       *.Z)         uncompress $1;;
       *.7z)        7z x $1      ;;
+      *.zip)        unzip $1      ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
@@ -156,22 +157,22 @@ v ()
 {
     # if directory or no param
     # list dir
-    if [ -d $1 ] || [ -z $1 ] ; then
+    if [ -d "$1" ] || [ -z "$1" ] ; then
         ls -lh $1
     # if file with specific endings
     # open w/ program
     # default: open in text EDITOR
-    elif [ -f $1 ] ; then
-        case $1 in
-            *.mp3)  mpv $1 &  ;;
-            *.mp4)  mpv $1 &  ;;
-            *.mov)  mpv $1 &  ;;
-            *.mkv)  mpv $1 &  ;;
+    elif [ -f "$1" ] ; then
+        case "$1" in
+            *.mp3)  mpv "$1" &  ;;
+            *.mp4)  mpv "$1" &  ;;
+            *.mov)  mpv "$1" &  ;;
+            *.mkv)  mpv "$1" &  ;;
 
-            *.pdf)  zathura $1 &  ;;
-            *.ps)  zathura $1 &  ;;
+            *.pdf)  zathura "$1" &  ;;
+            *.ps)  zathura "$1" &  ;;
 
-            *)  $EDITOR $1   ;;
+            *)  $EDITOR "$1"   ;;
         esac
     else
         echo "'$1' is not a valid file"
