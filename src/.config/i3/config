@@ -167,6 +167,8 @@ bindsym $mod+Shift+odiaeresis move container to workspace number $ws10
 assign [class="Firefox"] $ws1
 assign [class="Lollypop"] $ws3
 assign [class="Chromium"] $ws4
+assign [class="Steam"] $ws4
+assign [class="csgo_linux64"] $ws4
 assign [class="libreoffice"] $ws5
 assign [class="Signal"] $ws7
 assign [class="Bitwarden"] $ws8
