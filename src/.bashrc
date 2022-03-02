@@ -156,8 +156,10 @@ v ()
 {
     # if directory or no param
     # list dir
-    if [ -d "$1" ] || [ -z "$1" ] ; then
-        ls -lh $1
+    if [ -d "$1" ]  ; then
+        ls -lh "$1"
+    elif [ -z "$1" ] ; then
+        ls -lh "."
     # if file with specific endings
     # open w/ program
     # default: open in text EDITOR
