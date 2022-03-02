@@ -141,7 +141,6 @@ ex ()
       *.zip)       unzip $1     ;;
       *.Z)         uncompress $1;;
       *.7z)        7z x $1      ;;
-      *.zip)        unzip $1      ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
@@ -168,6 +167,7 @@ v ()
             *.mp4)  mpv "$1" &  ;;
             *.mov)  mpv "$1" &  ;;
             *.mkv)  mpv "$1" &  ;;
+            *.webm) mpv "$1" &  ;;
 
             *.pdf)  zathura "$1" &  ;;
             *.ps)  zathura "$1" &  ;;
