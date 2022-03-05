@@ -174,6 +174,10 @@ v ()
             *.pdf)  zathura "$1" &  ;;
             *.ps)  zathura "$1" &  ;;
 
+            *.jpg)  feh  "$1" &  ;;
+            *.jpeg)  feh  "$1" &  ;;
+            *.png)  feh  "$1" &  ;;
+
             *)  $EDITOR "$1"   ;;
         esac
     else
