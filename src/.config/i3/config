@@ -230,7 +230,7 @@ exec xinput set-prop "ELAN0501:01 04F3:3060 Touchpad" "libinput Natural Scrollin
 # de ezt nem teszteltem még
 
 # Screenshot
-bindsym --release $mod+p exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection-
+bindsym --release $mod+p exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p /tmp/screenshots && mv $f /tmp/screenshots && xclip -selection clipboard -t image/png -i /tmp/screenshots/`ls -1 -t /tmp/screenshots | head -1`' # Area selection-
 
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-scale ~/Pictures/hatter/Austria_by_Rutger_Heijmerikx.jpg

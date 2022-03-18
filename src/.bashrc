@@ -187,7 +187,7 @@ v ()
 export EDITOR=vim
 export VISUAL=vim
 
-export PATH="~/musicOrg:$PATH"
+export PATH="~/musicScript:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
 export PATH=$PATH:$PWD/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-linux-ubuntu14/bin
