@@ -234,3 +234,11 @@ bindsym --release $mod+p exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir 
 
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-scale ~/Pictures/hatter/Austria_by_Rutger_Heijmerikx.jpg
+
+
+# change backlight
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+bindsym $mod+m exec brightnessctl set +5%
+bindsym $mod+n exec brightnessctl set 5%-
