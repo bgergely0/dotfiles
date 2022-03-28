@@ -172,6 +172,7 @@ assign [class="csgo_linux64"] $ws4
 assign [class="libreoffice"] $ws5
 assign [class="Signal"] $ws7
 assign [class="Bitwarden"] $ws8
+assign [class="Gtkwave"] $ws8
 assign [class="mpv"] $ws9
 assign [class="Gnome-calendar"] $ws10
 assign [class="Thunderbird"] $ws10

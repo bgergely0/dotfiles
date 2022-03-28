@@ -178,6 +178,8 @@ v ()
             *.jpeg)  feh  "$1" &  ;;
             *.png)  feh  "$1" &  ;;
 
+            *.gtkw)  gtkwave  "$1" &  ;;
+
             *)  $EDITOR "$1"   ;;
         esac
     else
