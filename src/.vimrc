@@ -31,12 +31,12 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin('~/.vim/plugged')
 Plug 'sickill/vim-monokai'
-" Plug 'junegunn/goyo.vim'
-" Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'vim-scripts/AutoComplPop' " automatically calls built-in autocomp (instead of Ctrl + p)
-" Plug 'sheerun/vim-polyglot' " syntax & indent support
-" Plug 'honza/vim-snippets' " snippet definitions
-" Plug 'SirVer/ultisnips' " snippet engine
+Plug 'sheerun/vim-polyglot' " syntax & indent support
+Plug 'honza/vim-snippets' " snippet definitions
+Plug 'SirVer/ultisnips' " snippet engine
 " Plug 'junegunn/fzf' " fuzzy find
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()

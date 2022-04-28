@@ -180,6 +180,9 @@ v ()
 
             *.gtkw)  gtkwave  "$1" &  ;;
 
+            *.odt)  libreoffice  "$1" &  ;;
+            *.docx)  libreoffice  "$1" &  ;;
+
             *)  $EDITOR "$1"   ;;
         esac
     else
