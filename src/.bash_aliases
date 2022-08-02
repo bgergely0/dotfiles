@@ -5,3 +5,5 @@ alias pyvnv="python3 -m venv"
 alias ll='ls -l'
 alias cd..='cd ..'
 alias s='source'
+
+alias gitw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -'

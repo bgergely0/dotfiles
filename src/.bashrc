@@ -197,4 +197,5 @@ export PATH="~/.local/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
 export PATH=$PATH:$PWD/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-linux-ubuntu14/bin
 alias phere="export PITON_ROOT=\$PWD; source piton/piton_settings.bash; export ARIANE_ROOT=\$PITON_ROOT/piton/design/chip/tile/ariane"
-export any="/home/gergely/byoc/piton/design/chip/tile/anycore/"
+export any="/home/gergely/byoc/piton/design/chip/tile/anycore"
+export tests="/home/gergely/byoc/piton/verif/diag/assembly/riscv/rv64/"

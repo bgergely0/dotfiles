@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pic=$(ls -1 -t /tmp/screenshots | head -1)
+cp "/tmp/screenshots/$pic" screenshot.png
+
