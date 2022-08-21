@@ -247,3 +247,11 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 bindsym $mod+m exec brightnessctl set +5%
 bindsym $mod+n exec brightnessctl set 5%-
+
+# multi monitor setup:
+# eDP-1: laptop screen
+# xrandr --output HDMI-1 --auto --left-of eDP-1
+
+# Moving workspaces between screens
+bindsym $mod+z move workspace to output right
+bindsym $mod+u move workspace to output left
