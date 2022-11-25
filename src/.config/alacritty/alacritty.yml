@@ -435,8 +435,8 @@ key_bindings:
   #- { key: C,        mods: Control|Shift, action: Copy             }
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
   #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-  - { key: C,         mods: Control,       action: IncreaseFontSize }
-  - { key: X,         mods: Control,       action: DecreaseFontSize }
+  - { key: U,         mods: Control,       action: IncreaseFontSize }
+  - { key: I,         mods: Control,       action: DecreaseFontSize }
 
   # (macOS only)
   #- { key: Key0,   mods: Command, action: ResetFontSize    }

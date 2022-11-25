@@ -177,9 +177,10 @@ assign [class="libreoffice"] $ws5
 assign [class="Signal"] $ws7
 assign [class="Bitwarden"] $ws8
 assign [class="Gtkwave"] $ws8
+assign [class="Gnome-boxes"] $ws8
 assign [class="mpv"] $ws9
 assign [class="Gnome-calendar"] $ws10
-assign [class="Thunderbird"] $ws10
+assign [class="thunderbird"] $ws10
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
