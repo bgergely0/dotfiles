@@ -182,6 +182,9 @@ v ()
 
             *.odt)  libreoffice  "$1" &  ;;
             *.docx)  libreoffice  "$1" &  ;;
+            *.odp)  libreoffice  "$1" &  ;;
+            *.ppt)  libreoffice  "$1" &  ;;
+            *.pptx)  libreoffice  "$1" &  ;;
 
             *)  $EDITOR "$1"   ;;
         esac
@@ -195,6 +198,7 @@ export VISUAL=vim
 export PATH="~/musicScript:$PATH"
 export PATH="~/.local/bin:$PATH"
 export PATH="~/.cargo/bin:$PATH"
+export PATH="/opt/turtl:$PATH"
 export PATH=$PATH:$PWD/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-linux-ubuntu14/bin
 alias phere="export PITON_ROOT=\$PWD; source piton/piton_settings.bash; export ARIANE_ROOT=\$PITON_ROOT/piton/design/chip/tile/ariane"
 export any="/home/gergely/byoc/piton/design/chip/tile/anycore"
