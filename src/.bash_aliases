@@ -4,6 +4,7 @@ alias pyvnv="python3 -m venv"
 alias news="newsboat"
 
 alias ll='ls -l'
+alias vv='ls -cr -lth'
 alias cd..='cd ..'
 alias rm="trash-put"
 alias s='source'

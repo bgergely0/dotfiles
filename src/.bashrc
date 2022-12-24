@@ -186,6 +186,8 @@ v ()
             *.ppt)  libreoffice  "$1" &  ;;
             *.pptx)  libreoffice  "$1" &  ;;
 
+            *.html)  firefox  "$1" &  ;;
+
             *)  $EDITOR "$1"   ;;
         esac
     else
