@@ -1,4 +1,4 @@
-alias suli='cd /mnt/HDD/Documents/Tananyagok/m2/'
+alias suli='cd /mnt/HDD/Documents/Tananyagok/erasmus/subjects/'
 alias vid='ranger /mnt/HDD/Videos'
 alias pyvnv="python3 -m venv"
 alias news="newsboat"

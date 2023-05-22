@@ -15,6 +15,8 @@ set ignorecase  " ignore case in search patterns
 set incsearch  " highlight match while typing search pattern
 set smartcase  " no ignore case when pattern has uppercase
 
+set laststatus=2
+set statusline+=%{wordcount().words}\ words
 
 command! Reload execute "source ~/.vimrc"
 

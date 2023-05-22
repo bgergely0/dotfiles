@@ -169,6 +169,7 @@ v ()
             *.mp4)  mpv "$1" &  ;;
             *.mov)  mpv "$1" &  ;;
             *.mkv)  mpv "$1" &  ;;
+            *.avi)  mpv "$1" &  ;;
             *.webm) mpv "$1" &  ;;
 
             *.pdf)  zathura "$1" &  ;;
@@ -206,4 +207,6 @@ alias phere="export PITON_ROOT=\$PWD; source piton/piton_settings.bash; export A
 export any="/home/gergely/byoc/piton/design/chip/tile/anycore"
 export tests="/home/gergely/byoc/piton/verif/diag/assembly/riscv/rv64/"
 
-export docs="/mnt/HDD/Documents"
+export hdd="/mnt/HDD"
+export docs="$hdd/Documents"
+export proj="$hdd/Videos/Projects"
