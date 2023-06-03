@@ -14,9 +14,9 @@ set smartindent
 set ignorecase  " ignore case in search patterns
 set incsearch  " highlight match while typing search pattern
 set smartcase  " no ignore case when pattern has uppercase
-
 set laststatus=2
 set statusline+=%{wordcount().words}\ words
+set signcolumn=yes " so the error column is always there
 
 command! Reload execute "source ~/.vimrc"
 
@@ -41,6 +41,10 @@ Plug 'honza/vim-snippets' " snippet definitions
 Plug 'SirVer/ultisnips' " snippet engine
 " Plug 'junegunn/fzf' " fuzzy find
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 
 syntax on
@@ -80,3 +84,9 @@ map <leader>m :w<cr>:!make<cr>
 " - Popup window (center of the current window)
 " - only works in neovim
 "let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
+
+
+let g:LanguageClient_serverCommands = {
+  \ 'cpp': ['clangd'],
+  \ 'c': ['clangd']
+  \ }
