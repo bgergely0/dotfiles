@@ -9,6 +9,8 @@ alias cd..='cd ..'
 alias rm="trash-put"
 alias s='source'
 alias pls='sudo $(fc -ln -1)'
+alias clc=clear
+alias bye=exit
 
 alias gitw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -'
 
