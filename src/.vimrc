@@ -88,5 +88,8 @@ map <leader>m :w<cr>:!make<cr>
 
 let g:LanguageClient_serverCommands = {
   \ 'cpp': ['clangd'],
-  \ 'c': ['clangd']
+  \ 'c': ['clangd'],
+  \ 'python' : ['pylsp'],
+  \ 'tex' : ['~/.cargo/bin/texlab'],
+  \ 'systemverilog' : ['~/.cargo/bin/svls']
   \ }

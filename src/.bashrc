@@ -195,8 +195,8 @@ v ()
         echo "'$1' is not a valid file"
     fi
 }
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 export PATH="~/musicScript:$PATH"
 export PATH="~/.local/bin:$PATH"
