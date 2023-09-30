@@ -39,8 +39,7 @@ Plug 'vim-scripts/AutoComplPop' " automatically calls built-in autocomp (instead
 Plug 'sheerun/vim-polyglot' " syntax & indent support
 Plug 'honza/vim-snippets' " snippet definitions
 Plug 'SirVer/ultisnips' " snippet engine
-" Plug 'junegunn/fzf' " fuzzy find
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'rust-lang/rust.vim'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
