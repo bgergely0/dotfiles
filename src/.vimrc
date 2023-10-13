@@ -44,11 +44,24 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+" Plug 'shirk/vim-gas'
+" Plug 'ARM9/arm-syntax-vim'
+Plug 'preservim/tagbar'
+" If you don't have nodejs and yarn
+" use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
+" see: https://github.com/iamcco/markdown-preview.nvim/issues/50
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+let g:rustfmt_autosave = 1
+let g:tagbar_width = 50
 
 syntax on
 colorscheme monokai
 set t_Co=256
+"let g:airline_theme='minimalist'
 
 " autocmd VimEnter * Goyo
 
@@ -58,15 +71,10 @@ nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> : vertical resize 30<CR>
 nnoremap <leader>v ::Vex <CR>
 
-
-" nnoremap <leader>n :NERDTreeFocus<CR>
-" nnoremap <C-n> :NERDTree<CR>
-" nnoremap <C-t> :NERDTreeToggle<CR>
-" nnoremap <C-f> :NERDTreeFind<CR>
-
-" commands for exiting from Goyo
+" commands for exiting from Goyo (or exiting 2 pages at once)
 map <leader>q :q<cr>:q<cr>
 map <leader>wq :wq<cr>:q<cr>
 map <leader>w :w<cr>
@@ -75,20 +83,16 @@ map <leader>w :w<cr>
 " write file, then call make
 map <leader>m :w<cr>:!make<cr>
 
+" Tagbar
+map <leader>t :TagbarToggle<cr>
 
-" fuzzyfind commands:
-" Ctrl-X to open file in horizontal split
-" Ctrl-V to open file in vertical split
-"
-" - Popup window (center of the current window)
-" - only works in neovim
-"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
-
-
+map <leader>gd :call LanguageClient_textDocument_definition({'gotoCmd': 'vs'})<cr>
 let g:LanguageClient_serverCommands = {
+  \ 'rust': ['rust-analyzer'],
   \ 'cpp': ['clangd'],
   \ 'c': ['clangd'],
   \ 'python' : ['pylsp'],
-  \ 'tex' : ['~/.cargo/bin/texlab'],
-  \ 'systemverilog' : ['~/.cargo/bin/svls']
   \ }
+
+  " \ 'tex' : ['~/.cargo/bin/texlab'],
+  " \ 'systemverilog' : ['~/.cargo/bin/svls']
