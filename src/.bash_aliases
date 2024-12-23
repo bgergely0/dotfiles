@@ -1,6 +1,6 @@
 alias suli='cd /mnt/HDD/Documents/Tananyagok/erasmus/subjects/'
 alias vid='ranger /mnt/HDD/Videos'
-alias pyvnv="python3 -m venv"
+alias pyvnv="python3 -m venv venv"
 alias news="newsboat"
 
 alias ll='ls -l'
