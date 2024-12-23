@@ -17,3 +17,13 @@ alias gitw='git diff -U0 -w --no-color | git apply --cached --ignore-whitespace 
 alias nn="note.sh"
 alias nnd="note.sh display"
 alias nng="note.sh grep"
+
+alias novim="mv ~/.vimrc ~/vimrc"
+alias yesvim="mv ~/vimrc ~/.vimrc"
+
+alias gss="git status"
+alias gso="git show"
+alias gco="git checkout"
+alias gd="git diff"
+alias ga="git add"
+alias gcp="git cherry-pick"
