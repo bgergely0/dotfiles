@@ -3,6 +3,8 @@ filetype off
 
 set noerrorbells
 set number " relativenumber " Show line numbers
+set cursorline " aim help
+set cursorcolumn
 set encoding=utf-8 " Encoding
 set ruler " Show file stats
 autocmd BufWritePre * %s/\s\+$//e " Delete trailing whitespaces on save
@@ -44,8 +46,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-" Plug 'shirk/vim-gas'
-" Plug 'ARM9/arm-syntax-vim'
+Plug 'mbbill/undotree'
 Plug 'preservim/tagbar'
 " If you don't have nodejs and yarn
 " use pre build, add 'vim-plug' to the filetype list so vim-plug can update this plugin
@@ -57,6 +58,8 @@ call plug#end()
 
 let g:rustfmt_autosave = 1
 let g:tagbar_width = 50
+
+autocmd BufWritePost *.py !black %
 
 syntax on
 colorscheme monokai
@@ -86,7 +89,12 @@ map <leader>m :w<cr>:!make<cr>
 " Tagbar
 map <leader>t :TagbarToggle<cr>
 
+nnoremap <leader>u :UndotreeToggle<CR>
+
 map <leader>gd :call LanguageClient_textDocument_definition({'gotoCmd': 'vs'})<cr>
+map <leader>i :call LanguageClient_textDocument_hover()<cr>
+map <leader>r :call LanguageClient_textDocument_references()<cr>
+
 let g:LanguageClient_serverCommands = {
   \ 'rust': ['rust-analyzer'],
   \ 'cpp': ['clangd'],
